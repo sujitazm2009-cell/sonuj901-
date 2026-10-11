@@ -210,10 +210,10 @@ let recognition = null;
 let listening = false;
 let speakAfterCommand = true;
 
-function addMessage(text, who = "jarvis") {
+function addMessage(text, who = "sonuj901") {
   const bubble = document.createElement("div");
   bubble.className = "bubble " + who;
-  bubble.textContent = (who === "user" ? "You: " : "JARVIS: ") + text;
+  bubble.textContent = (who === "user" ? "You: " : "SONUJ901: ") + text;
   chat.appendChild(bubble);
   chat.scrollTop = chat.scrollHeight;
 }
@@ -289,7 +289,7 @@ function runCommand(raw) {
     return;
   }
 
-  if (/\b(hello|hi|namaste|kaise ho|how are you)\b/.test(t)) {
+  if (/\b(hello|hi|namaste|kaise ho|how are you |hyee)\b/.test(t)) {
     reply("Namaste! Main badhiya hoon. Batao, main kya karun?");
     return;
   }
